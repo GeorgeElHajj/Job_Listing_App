@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ListingsController;
-use App\Models\Listings;
+use App\Http\Controllers\ListingController;
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 
 use function PHPSTORM_META\map;
@@ -16,8 +16,8 @@ use function PHPSTORM_META\map;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[ListingsController::class,'index']);
+Route::get('/',[ListingController::class,'index']);
 
 
-Route::get('/listings/{listing}', 
-[ListingsController::class,'show']);
+Route::get('/listings/{listings}', 
+[ListingController::class,'show']);

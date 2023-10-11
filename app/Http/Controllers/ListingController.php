@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Listings;
+use App\Models\Listing;
 use Illuminate\Http\Request;
 
-class ListingsController extends Controller
+class ListingController extends Controller
 {
     //show all listings
     public function index(){
         return view('listings.index',[
-            'listings'=>Listings::all()
+            'listings'=>Listing::all()
         ]);
     }
     //show single listing
-    public function show(Listings $listing){
+    public function show(Listing $listing){
         return view('listings.show', [
             'listing'=>$listing
         ]);
