@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Listings;
 use Illuminate\Support\Facades\Route;
+
+use function PHPSTORM_META\map;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/listings/{listing}', function (Listings $listings) 
+{
+     return view('listing', [
+        'listing' => $listings
+     ]);
 });
