@@ -16,8 +16,12 @@ use function PHPSTORM_META\map;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//All Listings
 Route::get('/',[ListingController::class,'index']);
 
 
+// Show Create Form
+Route::get('/listings/create',[ListingController::class, 'create']);
+// single Listing
 Route::get('/listings/{listings}', 
 [ListingController::class,'show']);
