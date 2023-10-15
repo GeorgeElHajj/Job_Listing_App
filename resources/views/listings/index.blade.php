@@ -1,4 +1,4 @@
-<x-layout>
+<div>
   @if (!Auth::check())
     @include('partials._hero')
   @endif
@@ -10,7 +10,7 @@
     @unless(count($listings) == 0)
 
     @foreach($listings as $listing)
-    <x-listing-card :listing="$listing" />
+    <listing-card :listing="$listing" />
     @endforeach
 
     @else
@@ -19,4 +19,4 @@
     @endunless
 
   </div>
-</x-layout>
+</div>
